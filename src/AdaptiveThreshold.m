@@ -1,8 +1,8 @@
 % 局部自适应二值化
 function img_bin = AdaptiveThreshold(img_in, r, percent)
 %{
-% I = imread('..\img\sky.jpg');
-I = imread('..\img\tulips.bmp');
+% I = imread('.\img\sky.jpg');
+I = imread('.\img\tulips.bmp');
 Ig = rgb2gray(I);
 img_in = double(Ig)/255;
 r = 8;

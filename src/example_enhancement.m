@@ -3,7 +3,7 @@
 
 close all;
 
-I = double(imread('..\img\tulips.bmp')) / 255;
+I = double(imread('.\img\tulips.bmp')) / 255;
 p = I;
 
 r = 16;

@@ -1,8 +1,8 @@
 %% WGIF full detail enhancement
 
-% I = imread('..\img\tulips.bmp');
-%I = imread('..\img\bird.jpg');
-I = imread('..\img\sky.jpg');
+% I = imread('.\img\tulips.bmp');
+%I = imread('.\img\bird.jpg');
+I = imread('.\img\sky.jpg');
 % Ig = rgb2gray(I);
 X = double(I)/255;
 
@@ -26,8 +26,8 @@ imshow([X, Z, X_enhanced]);
 
 %% WGIF selective detail enhancement
 
-I = imread('..\img\tulips.bmp');
-%I = imread('..\img\sky.jpg');
+I = imread('.\img\tulips.bmp');
+%I = imread('.\img\sky.jpg');
 % Ig = rgb2gray(I);
 X = double(I)/255;
 
@@ -56,8 +56,8 @@ imshow([X,X_enhanced, X_enhanced2]);
 
 %% WGIF selective detail enhancement  gray
 
-I = imread('..\img\tulips.bmp');
-% I = imread('..\img\sky.jpg');
+I = imread('.\img\tulips.bmp');
+% I = imread('.\img\sky.jpg');
 Ig = rgb2gray(I);
 X = double(Ig)/255;
 
@@ -105,9 +105,9 @@ figure('Name', 'WGIF selective detail enhancement');
 imshow([X_enhanced,X_enhanced2]);
 
 %% edge aware wgighting
-% I = imread('..\img\tulips.bmp');
-% I = imread('..\img\bird.jpg');
-I = imread('..\img\sky.jpg');
+% I = imread('.\img\tulips.bmp');
+% I = imread('.\img\bird.jpg');
+I = imread('.\img\sky.jpg');
 Ig = rgb2gray(I);
 X = double(Ig)/255;
 G = X;
@@ -141,8 +141,8 @@ subplot(121);   imshow(gamma0);       title('gamma0');
 subplot(122);   imshow(gamma);        title('gamma');
 %% GIF v.s. WGIF
 
-% I = imread('..\img\tulips.bmp');
-I = imread('..\img\sky.jpg');
+% I = imread('.\img\tulips.bmp');
+I = imread('.\img\sky.jpg');
 % Ig = rgb2gray(I);
 X = double(I)/255;
 
