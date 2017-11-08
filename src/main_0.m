@@ -142,7 +142,8 @@ subplot(122);   imshow(gamma);        title('gamma');
 %% GIF v.s. WGIF
 
 % I = imread('.\img\tulips.bmp');
-I = imread('.\img\sky.jpg');
+% I = imread('.\img\sky.jpg');
+I = imread('.\img\forest.jpg');
 % Ig = rgb2gray(I);
 X = double(I)/255;
 
@@ -177,8 +178,4 @@ plot(l_X, 'Color', [1,0,0]); hold on;
 plot(l_G, 'Color', [0,1,0]); hold on;
 plot(l_W, 'Color', [0,0,1]); hold on;
 legend('input', 'GIF', 'WGIF');
-
-
-
-
 
