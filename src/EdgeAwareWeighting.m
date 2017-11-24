@@ -14,9 +14,7 @@ N = boxfilter(ones(hei, wid), r);
 
 mean_G = boxfilter(G, r) ./ N;
 mean_GG = boxfilter(G.*G, r) ./ N;
-var_G0 = mean_GG - mean_G .* mean_G;     % variance
-
-var_G = var_G0;% / max(max(var_G0));
+var_G = mean_GG - mean_G .* mean_G;     % variance
 
 % Eqn(5)
 var_G1 = var_G + eps;

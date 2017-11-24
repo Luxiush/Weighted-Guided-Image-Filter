@@ -18,7 +18,7 @@ mean_G = boxfilter(G, r) ./ N;
 mean_GG = boxfilter(G.*G, r) ./ N;
 var_G = mean_GG - mean_G .* mean_G;
 
-gamma = EdgeAwareWeighting(G);
+% gamma = EdgeAwareWeighting(G);
 
 a = (mean_GX - mean_G.*mean_X) ./ (var_G + lambda./gamma);
 b = mean_X - a .* mean_G;
