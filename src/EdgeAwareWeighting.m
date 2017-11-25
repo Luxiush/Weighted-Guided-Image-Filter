@@ -1,10 +1,9 @@
 function gamma = EdgeAwareWeighting(G)
 % Eqn(5) in the paper
 % G:    guidance image, must be a gray-scale image
-% tao:  weighting result
+% gamma:  weighting result
 
 % L = 1; % dynamic range
-% L = max(max(G)) / min(min(G));
 L = max(max(G)) - min(min(G));
 eps = (0.001*L)^2;
 r = 1; % ´°¿Ú°ë¾¶(x-r:x+r, y-r:y+r)

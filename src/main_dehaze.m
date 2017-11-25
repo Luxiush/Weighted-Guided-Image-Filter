@@ -1,11 +1,13 @@
 %% Demo of haze removal
-% I_rgb = imread('.\img\forest.jpg');
-I_rgb = imread('.\img\forest2.jpg');
+I_rgb = imread('.\img\forest.jpg');
+% I_rgb = imread('.\img\forest2.jpg');
 % I_rgb = imread('.\img\river.jpg');
 
 I_rgb = double(I_rgb) / 255;
 
-epsilon = 7; %10;
+addpath('dehaze');
+
+epsilon = 7; %10;       % window radius for Minfilter
 I_min = min(I_rgb, [], 3);% + min_offset;
 I_dark = MinFilter(I_min, epsilon);  % Eqn(23)
 
@@ -14,12 +16,12 @@ Ac = GetAirLight(I_rgb, I_dark, 0.98);
 omega = 31/32;
 t = 1 - omega * (I_dark./min(Ac));     % Eqn(27)
 
-r = 60;
-lambda = 1/1000;
+r = 60;                 % raduis for wgif
+lambda = 1/1000;        % regulation parameter for wgif
 G = rgb2gray(I_rgb);
 t_smoothed = WeightedGuidedImageFilter(t, G, r, lambda);
 
-haze_level = 0.03125; % 0(light), 0.03125(normal), 0.0625(heavy);
+haze_level = 0.03125;   % 0(light), 0.03125(normal), 0.0625(heavy);
 t_adjusted = t_smoothed .^(1+haze_level);   % Eqn(28)
 amplify_factor0 = max(0.1, 1./t_adjusted - 1);
 amplify_factor = repmat(amplify_factor0, 1,1,3);

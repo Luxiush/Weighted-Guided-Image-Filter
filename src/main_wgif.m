@@ -1,7 +1,7 @@
 %% GIF v.s. WGIF
 
-% I = imread('.\img\tulips.bmp');
-I = imread('.\img\sky.jpg');
+I = imread('.\img\tulips.bmp');
+% I = imread('.\img\sky.jpg');
 % I = imread('.\img\forest.jpg');
 % Ig = rgb2gray(I);
 X = double(I)/255;

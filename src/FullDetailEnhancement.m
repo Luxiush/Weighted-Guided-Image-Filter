@@ -1,8 +1,8 @@
 function X_enhanced = FullDetailEnhancement(X, r, lambda, theta)
 % full detail enhancment
 % X:    img in, double
-% r:    window radius
-% lambda:   regularization parameter
+% r:    window radius (for wgif)
+% lambda:   regularization parameter (for wgif)
 % theta:    amplify factor
 
 [hei, wid, channels] = size(X);

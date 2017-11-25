@@ -1,5 +1,5 @@
-% 局部自适应二值化
 function img_bin = AdaptiveThreshold(img_in, r, percent)
+% 局部自适应二值化
 %{
 % I = imread('.\img\sky.jpg');
 I = imread('.\img\tulips.bmp');
