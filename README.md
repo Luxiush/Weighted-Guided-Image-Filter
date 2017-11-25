@@ -1,4 +1,4 @@
-# 高级实训项目 --- Weighted-Guided-Image-Filter
+# Weighted-Guided-Image-Filter
 
-## Reference: [Weighted Guided Image Filtering](http://ieeexplore.ieee.org/document/6957555/?reload=true)
+## [Weighted Guided Image Filtering](http://ieeexplore.ieee.org/document/6957555/?reload=true) 中所描述的加权引导滤波算法的实现
 
